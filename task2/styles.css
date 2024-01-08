@@ -53,7 +53,8 @@ fieldset {
 
 .buttons {
     margin-top: 20px;
-    text-align: center; /* Center the buttons */
+    text-align: center; 
+    margin-bottom: 20px;
 }
 
 button {

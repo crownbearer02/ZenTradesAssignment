@@ -69,15 +69,11 @@
     </div>
 
     <div class="green-button">
-        <button type="button">Back</button>
+        <button type="button" onclick="goToIndex()">Back</button>
     </div>
 
     <script>
         // JavaScript code for rendering charts using Chart.js
-        function goToIndex() {
-            window.location.href = 'index.html';
-        }
-
         var dataLocation = {
             labels: ['Location 1', 'Location 2', 'Location 3', 'Location 4', 'Location 5'],
             datasets: [{
@@ -109,6 +105,10 @@
             type: 'bar',
             data: dataJobType,
         });
+
+        function goToIndex() {
+            window.location.href = 'index.html';
+        }
     </script>
 </body>
 
