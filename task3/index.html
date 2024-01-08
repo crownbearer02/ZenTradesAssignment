@@ -35,7 +35,7 @@
             margin-top: -26px;
         }
 
-        .container input[type="Name"],
+        .container input[type="email"],
         .container input[type="Password"] {
             border: 0;
             background-color: #fff; /* Solid white background */
@@ -50,20 +50,20 @@
             transition: 0.25s;
         }
 
-        .container input[type="Name"]:focus,
+        .container input[type="email"]:focus,
         .container input[type="Password"]:focus {
             width: 280px;
             border-color: #2ecc71;
         }
 
-        .container input[type="login"] {
+        .container input[type="submit"] {
             border: 0;
             background-color: #2ecc71; /* Solid green background */
             display: block;
             margin: 10px auto;
             text-align: center;
             padding: 14px 10px;
-            width: 250px;
+            width: 268px;
             outline: none;
             color: beige;
             border-radius: 8px;
@@ -72,7 +72,7 @@
             font-size: 15px;
         }
 
-        .container input[type="login"]:hover {
+        .container input[type="submit"]:hover {
             background-color: #238c3b; /* Darker green on hover */
         }
         
@@ -86,16 +86,17 @@
 </head>
 <body>
     <div class="container">
-        <h1>
-            <!-- Replace the src attribute value with the path to your logo image -->
-            <img src="image-removebg-preview.png" alt="Logo">
-        </h1>
-        <form action="index.html">
-            <input type="Name" placeholder="Username"><br>
-            <input type="Password" placeholder="Password"><br>
-            <input type="login" value="Login">
-            <a href="#">Forgot your password?</a>
+
+        <form onsubmit="return validateForm();">
+            <h1>
+                <!-- Replace the src attribute value with the path to your logo image -->
+                <img src="image-removebg-preview.png" alt="Logo">
+            </h1>
+            <input type="email" id="username" placeholder="Username" name="username" required>
+            <input type="Password" id="password" placeholder="Password" name="password" required>
+            <input type="submit" value='Login'>
+            <a href="#">Forgot Password?</a>
+            <script src="validation.js"></script>
         </form>
-    </div>
 </body>
 </html>
