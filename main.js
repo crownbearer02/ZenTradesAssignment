@@ -1,5 +1,3 @@
-// main.js
-
 document.addEventListener('DOMContentLoaded', function () {
     const productListElement = document.getElementById('productList');
     const loadMoreButton = document.getElementById('loadMoreButton');
@@ -54,8 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
         loadMoreButton.style.display = end < sortedData.length ? 'block' : 'none';
     }
 
-    // URL of the JSON file
-    const jsonUrl = "https://s3.amazonaws.com/open-to-cors/assignment.json"; // Replace with the actual URL
+    const jsonUrl = "https://s3.amazonaws.com/open-to-cors/assignment.json"; 
 
     // Fetch JSON data
     fetchJsonData(jsonUrl)
